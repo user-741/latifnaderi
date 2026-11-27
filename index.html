@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Latif Naderi | IT Support and Cybersecurity, Melbourne</title>
+<meta name="description" content="Latif Naderi is a final-year Bachelor of Cybersecurity student at Victoria University in Melbourne, a freelance IT support technician and the co-founder and lead developer of ClarityMeet.">
+<meta name="author" content="Latif Naderi">
+<link rel="canonical" href="https://latifnaderi.vercel.app/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Latif Naderi | IT Support and Cybersecurity">
+<meta property="og:description" content="Cybersecurity student at Victoria University, freelance IT support technician and co-founder of ClarityMeet. Based in Melbourne.">
+<meta property="og:url" content="https://latifnaderi.vercel.app/">
+<meta property="og:image" content="https://latifnaderi.vercel.app/share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta property="og:site_name" content="Latif Naderi">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="profile:first_name" content="Latif">
+<meta property="profile:last_name" content="Naderi">
+<meta name="theme-color" content="#102a43">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Latif Naderi",
+  "url": "https://latifnaderi.vercel.app/",
+  "jobTitle": "IT Support Technician",
+  "description": "Final-year Bachelor of Cybersecurity student, freelance IT support technician and co-founder and lead developer of ClarityMeet.",
+  "address": {"@type": "PostalAddress", "addressLocality": "Melbourne", "addressRegion": "VIC", "addressCountry": "AU"},
+  "alumniOf": {"@type": "CollegeOrUniversity", "name": "Victoria University"},
+  "knowsAbout": ["IT support", "Help desk", "Cybersecurity", "Windows Server", "Active Directory", "Networking", "Splunk", "Python", "TypeScript"],
+  "memberOf": {"@type": "Organization", "name": "ClarityMeet", "url": "https://claritymeet.vercel.app/"},
+  "sameAs": ["https://www.linkedin.com/in/latifnaderi/", "https://github.com/user-741"]
+}
+</script>
+<style>
+:root {
+  --bg: #e9eef2; --paper: #fff; --sunk: #f4f7f9;
+  --ink: #102a43; --text: #334e68; --muted: #5f7488; --line: #d0dbe4;
+  --blue: #1f5fbf; --blue-bg: #e6eefb;
+  --amber: #a35f00; --amber-bg: #fdf0dc;
+  --green: #1b7f4c; --green-bg: #e2f3e9;
+  --red: #b42318; --red-bg: #fde8e6;
+  --display: "Bricolage Grotesque", "Segoe UI", sans-serif;
+  --body: "Atkinson Hyperlegible", system-ui, sans-serif;
+  --code: "JetBrains Mono", ui-monospace, Consolas, monospace;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 400 1.03rem/1.6 var(--body); }
+a { color: var(--blue); text-underline-offset: 3px; }
+button { font: inherit; color: inherit; cursor: pointer; }
+:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; border-radius: 6px; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; animation: none !important; } }
+
+/* top bar */
+.bar { position: sticky; top: 0; z-index: 20; background: rgba(233,238,242,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.bar .wrap { display: flex; align-items: center; gap: 18px; height: 64px; }
+.bar .me { font: 800 1.1rem var(--display); color: var(--ink); text-decoration: none; margin-right: auto; }
+.lens { display: flex; align-items: center; gap: 8px; font-size: .9rem; color: var(--muted); }
+.seg { display: inline-flex; background: var(--paper); border: 1px solid var(--line); border-radius: 10px; padding: 3px; }
+.seg button { border: 0; background: none; padding: 6px 11px; border-radius: 7px; font-size: .9rem; color: var(--text); }
+.seg button[aria-pressed="true"] { background: var(--ink); color: #fff; }
+.tool { border: 1px solid var(--line); background: var(--paper); border-radius: 10px; padding: 7px 12px; font-size: .9rem; }
+.tool:hover { border-color: var(--ink); }
+.tool .short { display: none; }
+.tool kbd { font: 600 .75rem var(--code); background: var(--sunk); border: 1px solid var(--line); border-radius: 5px; padding: 1px 5px; margin-left: 6px; }
+
+/* hero */
+.hero { display: grid; grid-template-columns: .9fr 1.1fr; gap: 48px; padding: 56px 0 64px; align-items: start; }
+h1 { font: 800 clamp(2.8rem, 6.4vw, 4.6rem)/.98 var(--display); letter-spacing: -.035em; color: var(--ink); margin: 6px 0 18px; }
+.lede { font-size: 1.22rem; color: var(--ink); max-width: 34ch; margin: 0 0 22px; }
+.facts { display: grid; grid-template-columns: auto 1fr; gap: 9px 18px; margin: 0 0 26px; padding: 18px 20px; background: var(--paper); border: 1px solid var(--line); border-radius: 12px; }
+.facts dt { color: var(--muted); font-size: .93rem; }
+.facts dd { margin: 0; color: var(--ink); font-weight: 700; }
+.cta { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn { display: inline-flex; align-items: center; padding: 11px 18px; border-radius: 10px; border: 2px solid var(--ink); color: var(--ink); background: none; font-weight: 700; text-decoration: none; }
+.btn.solid { background: var(--ink); color: #fff; }
+.btn:hover { background: var(--blue); border-color: var(--blue); color: #fff; }
+
+/* the network map (hero interactive) */
+.map { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 24px 50px -30px rgba(16,42,67,.45); overflow: hidden; }
+.map-head { padding: 16px 20px 4px; }
+.map-head h2 { font: 700 1.15rem var(--display); color: var(--ink); margin: 0; }
+.map-head span { display: block; color: var(--muted); font-size: .88rem; margin-top: 2px; }
+.map svg { display: block; width: 100%; height: auto; background-image: radial-gradient(#dbe4ec 1px, transparent 1px); background-size: 18px 18px; }
+.map .link { stroke: #b9c7d3; stroke-width: 2; }
+.map .link.hot { stroke: var(--blue); }
+.map .link.bad { stroke: var(--red); }
+.nd { cursor: pointer; }
+.nd rect { fill: #fff; stroke: #c3d0dc; stroke-width: 1.5; transition: fill .2s, stroke .2s; }
+.nd text { font: 700 12.5px var(--body); fill: var(--ink); pointer-events: none; }
+.nd text.s { font: 400 10.5px var(--body); fill: var(--muted); }
+.nd:hover rect, .nd:focus rect { stroke: var(--blue); }
+.nd:focus { outline: none; }
+.nd:focus-visible rect { stroke: var(--blue); stroke-width: 3; }
+.nd.on rect { fill: var(--blue-bg); stroke: var(--blue); }
+.nd.ok rect { fill: var(--green-bg); stroke: var(--green); }
+.nd.bad rect { fill: var(--red-bg); stroke: var(--red); }
+.pkt { fill: var(--blue); }
+.pkt.bad { fill: var(--red); }
+.runs { display: flex; flex-wrap: wrap; gap: 8px; padding: 6px 20px 14px; }
+.run { border: 1px solid var(--line); background: var(--paper); border-radius: 999px; padding: 6px 13px; font-size: .9rem; }
+.run:hover { border-color: var(--blue); color: var(--blue); }
+.run[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+.log { font: 400 .82rem/1.6 var(--code); background: #0f2133; color: #d8e6f3; margin: 0; padding: 12px 20px; min-height: 132px; max-height: 190px; overflow-y: auto; white-space: pre-wrap; }
+.log .ts { color: #7f9fbf; }
+.log .bad { color: #ff9b8f; }
+.log .ok { color: #8fe0b2; }
+.log .info { color: #d8e6f3; font-family: var(--body); font-size: .9rem; }
+.term { font: 400 .84rem/1.55 var(--code); background: #0f2133; color: #d8e6f3; border-radius: 10px; padding: 12px 14px; margin: 12px 0; white-space: pre; overflow-x: auto; }
+.term .c { color: #8fb3d6; }
+
+/* sections */
+section { padding: 72px 0; border-top: 1px solid var(--line); }
+h2.h { font: 800 clamp(1.8rem, 3.4vw, 2.4rem)/1.1 var(--display); letter-spacing: -.02em; color: var(--ink); margin: 0 0 10px; }
+.sub { margin: 0 0 34px; max-width: 64ch; }
+h3 { font: 700 1.3rem var(--display); color: var(--ink); margin: 0 0 6px; }
+
+/* case studies */
+.case { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 30px; margin-bottom: 26px; }
+.case-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; align-items: baseline; }
+.case-top .stack { color: var(--muted); font-size: .93rem; }
+.psr { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin: 20px 0 24px; }
+.psr h4 { margin: 0 0 4px; font-size: .95rem; color: var(--ink); }
+.psr p { margin: 0; font-size: .97rem; }
+.links a { font-weight: 700; margin-right: 18px; }
+
+.flow { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin: 6px 0 12px; }
+.node { border: 1px solid var(--line); background: var(--sunk); border-radius: 10px; padding: 10px; text-align: left; font-size: .88rem; position: relative; min-height: 70px; }
+.node b { display: block; color: var(--ink); font-size: .93rem; }
+.node:not(:last-child)::after { content: ""; position: absolute; right: -9px; top: 50%; width: 8px; height: 2px; background: var(--muted); }
+.node[aria-pressed="true"] { border-color: var(--blue); background: var(--blue-bg); }
+.node-detail { background: var(--sunk); border-radius: 10px; padding: 12px 14px; min-height: 48px; font-size: .96rem; }
+
+.scan { display: grid; grid-template-columns: 260px 1fr; gap: 22px; margin-top: 6px; }
+.files { display: grid; gap: 8px; align-content: start; }
+.file { text-align: left; border: 1px solid var(--line); background: var(--sunk); border-radius: 10px; padding: 9px 12px; font: 400 .86rem var(--code); }
+.file[aria-pressed="true"] { border-color: var(--blue); background: var(--blue-bg); }
+.own { font-size: .9rem; color: var(--muted); }
+.own label { display: inline-block; margin-top: 6px; border: 1px dashed var(--muted); border-radius: 10px; padding: 9px 12px; cursor: pointer; color: var(--ink); }
+.own input { position: absolute; opacity: 0; width: 1px; }
+.result { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.checks { list-style: none; margin: 0; padding: 12px 16px; display: grid; gap: 6px; }
+.checks li { display: grid; grid-template-columns: 150px 1fr; gap: 10px; font-size: .93rem; }
+.checks li span:first-child { color: var(--muted); }
+.checks code { font: .82rem var(--code); overflow-wrap: anywhere; }
+.verdict { padding: 10px 16px; font-weight: 700; border-top: 1px solid var(--line); }
+.verdict.ok { color: var(--green); background: var(--green-bg); }
+.verdict.warn { color: var(--amber); background: var(--amber-bg); }
+.verdict.bad { color: var(--red); background: var(--red-bg); }
+.result .term { margin: 0; border-radius: 0; }
+
+.more { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 40px; }
+.proj { padding: 18px 0; border-bottom: 1px solid var(--line); }
+.proj h3 { font-size: 1.12rem; }
+.proj p { margin: 0 0 6px; }
+.proj .stack { color: var(--muted); font-size: .9rem; }
+.roles { display: inline-flex; gap: 6px; margin-left: 6px; }
+.roles span { font-size: .75rem; border: 1px solid var(--line); border-radius: 999px; padding: 1px 8px; color: var(--muted); }
+
+/* lens: dim what doesn't match */
+[data-role] { transition: opacity .25s; }
+body[data-lens="help"] [data-role]:not([data-role~="help"]),
+body[data-lens="sec"] [data-role]:not([data-role~="sec"]),
+body[data-lens="dev"] [data-role]:not([data-role~="dev"]) { opacity: .32; }
+
+/* skills with evidence */
+.skillgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 22px 30px; }
+.skillgrid h4 { margin: 0 0 8px; color: var(--ink); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { border: 1px solid var(--line); background: var(--paper); border-radius: 999px; padding: 4px 11px; font-size: .9rem; }
+.chip[data-ev]:hover, .chip[aria-pressed="true"] { border-color: var(--blue); color: var(--blue); }
+.evidence { margin-top: 22px; min-height: 52px; background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; }
+
+/* experience */
+.split { display: grid; grid-template-columns: 250px 1fr; gap: 40px; }
+.job { padding: 0 0 26px 22px; border-left: 2px solid var(--line); position: relative; }
+.job::before { content: ""; position: absolute; left: -7px; top: 8px; width: 12px; height: 12px; border-radius: 50%; background: var(--bg); border: 2px solid var(--blue); }
+.job:last-child { padding-bottom: 0; }
+.when { color: var(--muted); font-size: .93rem; }
+.job ul { margin: 8px 0 0; padding-left: 18px; }
+.job li { margin: 3px 0; max-width: 66ch; }
+.edu { list-style: none; margin: 0; padding: 0; }
+.edu li { padding: 11px 0; border-bottom: 1px solid var(--line); max-width: 72ch; }
+.edu li:last-child { border-bottom: 0; }
+
+.contact { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.contact span { display: block; color: var(--muted); font-size: .9rem; }
+.contact a, .contact strong { font-weight: 700; color: var(--ink); overflow-wrap: anywhere; }
+footer { padding: 28px 0 44px; border-top: 1px solid var(--line); color: var(--muted); font-size: .92rem; }
+
+/* dialogs */
+dialog { border: 0; border-radius: 16px; padding: 0; width: min(620px, calc(100vw - 32px)); box-shadow: 0 30px 80px -20px rgba(16,42,67,.5); color: var(--text); }
+dialog::backdrop { background: rgba(16,42,67,.45); }
+.dlg { padding: 26px 28px; }
+.dlg h2 { font: 800 1.7rem var(--display); color: var(--ink); margin: 0 0 4px; }
+.dlg .x { float: right; border: 0; background: none; font-size: 1.5rem; line-height: 1; color: var(--muted); }
+.brief { display: grid; grid-template-columns: auto 1fr; gap: 8px 18px; margin: 16px 0; }
+.brief dt { color: var(--muted); }
+.brief dd { margin: 0; color: var(--ink); font-weight: 700; }
+.dlg ul { padding-left: 18px; }
+.palette input { width: 100%; border: 0; border-bottom: 1px solid var(--line); padding: 18px 22px; font: 1.05rem var(--body); outline: none; }
+.palette ul { list-style: none; margin: 0; padding: 8px; max-height: 340px; overflow-y: auto; }
+.palette li button { width: 100%; text-align: left; border: 0; background: none; padding: 10px 14px; border-radius: 8px; }
+.palette li button[aria-selected="true"], .palette li button:hover { background: var(--blue-bg); color: var(--ink); }
+.palette .none { padding: 12px 14px; color: var(--muted); }
+
+@media (max-width: 940px) {
+  .hero { grid-template-columns: 1fr; padding-top: 30px; }
+  .lens { display: none; }
+  .psr { grid-template-columns: 1fr; gap: 14px; }
+  .flow { grid-template-columns: 1fr 1fr; }
+  .node::after { display: none; }
+  .scan { grid-template-columns: 1fr; }
+  .more, .split, .contact { grid-template-columns: 1fr; gap: 16px; }
+  .checks li { grid-template-columns: 110px 1fr; }
+}
+@media (max-width: 520px) { .tool .lbl, .tool kbd { display: none; } .tool .short { display: inline; } .case { padding: 22px 18px; } }
+@media print {
+  body * { visibility: hidden; }
+  #brief, #brief * { visibility: visible; }
+  #brief { position: absolute; inset: 0; box-shadow: none; width: 100%; }
+  #brief .x, #brief .noprint { display: none; }
+}
+</style>
+</head>
+<body data-lens="all">
+<a class="sr" href="#main">Skip to content</a>
+<header class="bar">
+  <div class="wrap">
+    <a class="me" href="#top">Latif Naderi</a>
+    <div class="lens" role="group" aria-label="Highlight work for a role">
+      <span>Hiring for</span>
+      <div class="seg">
+        <button aria-pressed="true" data-lens="all">Any role</button>
+        <button aria-pressed="false" data-lens="help">Help desk</button>
+        <button aria-pressed="false" data-lens="sec">Security</button>
+        <button aria-pressed="false" data-lens="dev">Developer</button>
+      </div>
+    </div>
+    <button class="tool" id="openBrief"><span class="lbl">30-second summary</span><span class="short">Summary</span><span class="sr"> (opens a dialog)</span></button>
+    <button class="tool" id="openPal" aria-label="Open quick search">Search<kbd>Ctrl K</kbd></button>
+  </div>
+</header>
+
+<main id="main">
+<div class="wrap" id="top">
+  <div class="hero">
+    <div>
+      <h1>Latif Naderi</h1>
+      <p class="lede">IT support technician and final-year cybersecurity student. I fix real problems for real people, and I build software that holds up.</p>
+      <dl class="facts">
+        <dt>Looking for</dt><dd>IT Support, Help Desk or Junior Security role</dd>
+        <dt>Based in</dt><dd>Melbourne, VIC. Onsite, hybrid or remote</dd>
+        <dt>Available</dt><dd>Part-time now, full-time from 2027</dd>
+        <dt>Work rights</dt><dd>Australian citizen, full licence and own car</dd>
+      </dl>
+      <div class="cta">
+        <a class="btn solid" href="#contact">Get in touch</a>
+        <a class="btn" href="https://www.linkedin.com/in/latifnaderi/" rel="me">LinkedIn</a>
+        <a class="btn" href="https://github.com/user-741" rel="me">GitHub</a>
+      </div>
+    </div>
+
+    <div class="map" aria-labelledby="mapTitle">
+      <div class="map-head"><h2 id="mapTitle">How my projects fit together</h2><span>Simulated traffic. Pick a scenario or select a box.</span></div>
+      <svg id="net" viewBox="0 0 540 372" role="img" aria-label="Network map of Latif's projects: firewall, DNS blocker, file scanner, Splunk, camera VLAN and the ClarityMeet bot"></svg>
+      <div class="runs" id="runs" role="group" aria-label="Scenarios"></div>
+      <pre class="log" id="log" aria-live="polite"><span class="info">Each box is something I have built or set up. Run a scenario to watch the traffic move and read what each system logs.</span></pre>
+    </div>
+  </div>
+</div>
+
+<section id="work-proof">
+  <div class="wrap">
+    <h2 class="h">Proof of work</h2>
+    <p class="sub">Two projects written up the way I would explain them in an interview: the problem, what I did, and what came out of it. Both are open source.</p>
+
+    <article class="case" data-role="dev help" id="claritymeet">
+      <div class="case-top"><h3>ClarityMeet</h3><span class="stack">Co-founder and lead developer, team of four, 2026 to now. Next.js, TypeScript, Node, Supabase</span></div>
+      <div class="psr">
+        <div><h4>Problem</h4><p>Teams leave meetings with no shared record of what was decided or who owns what, so tasks fall through the cracks.</p></div>
+        <div><h4>What I did</h4><p>The four of us started ClarityMeet together. As lead developer I designed the architecture and built the backend and most of the frontend, including the bot server that joins Zoom and Teams calls, records them and runs several meetings at the same time.</p></div>
+        <div><h4>Result</h4><p>A live platform with summaries, tasks with owners and due dates, calendar sync and two-step sign-in. As a team we tested it with five real users and redesigned it from their feedback.</p></div>
+      </div>
+      <p class="sub" style="margin-bottom:10px">How a meeting flows through it. Select a step to see what happens there.</p>
+      <div class="flow" id="flow"></div>
+      <div class="node-detail" id="flowDetail" aria-live="polite">Select a step above.</div>
+      <p class="sub" style="margin:16px 0 8px">Co-founded and built with Chris Bobby, Perneil Calimlim and Muhammad Taha.</p>
+      <p class="links"><a href="https://claritymeet.vercel.app/">Visit ClarityMeet</a><a href="https://github.com/user-741/ClarityMeet">Read the code</a></p>
+    </article>
+
+    <article class="case" data-role="sec" id="scanner">
+      <div class="case-top"><h3>File Scanner with Splunk</h3><span class="stack">Python, watchdog, SQLite, Splunk HEC</span></div>
+      <div class="psr">
+        <div><h4>Problem</h4><p>Files land in a Downloads folder all day, and nobody checks them until something goes wrong.</p></div>
+        <div><h4>What I did</h4><p>Built a real-time scanner: it hashes every new file, scores its risk from type, location and entropy, quarantines anything flagged and sends each result to Splunk tagged with MITRE ATT&amp;CK.</p></div>
+        <div><h4>Result</h4><p>Every file event becomes a searchable Splunk record that can trigger an alert, the same way a SIEM is used in a SOC.</p></div>
+      </div>
+      <p class="sub" style="margin-bottom:10px">Try a simplified version of its checks. The hash and entropy are worked out for real in your browser, and your own file never leaves your device.</p>
+      <div class="scan">
+        <div class="files" id="files">
+          <div class="own">Or check one of your own files:<br><label for="ownFile">Choose a file</label><input type="file" id="ownFile"></div>
+        </div>
+        <div class="result" id="scanResult" aria-live="polite"><p style="padding:14px 16px;margin:0">Pick a sample file to scan it.</p></div>
+      </div>
+      <p class="links" style="margin-top:16px"><a href="https://github.com/user-741/file-scanner-splunk">Read the code</a></p>
+    </article>
+
+    <h2 class="h" style="font-size:1.6rem;margin-top:40px">More projects</h2>
+    <div class="more">
+      <div class="proj" data-role="help sec"><h3>Raspberry Pi DNS ad blocker <span class="roles"><span>Networking</span></span></h3><p>Blocks ads and trackers for every device on a home network at the DNS level.</p><span class="stack">Bash, Linux, dnsmasq. <a href="https://github.com/user-741/Ad-blocker">Code</a></span></div>
+      <div class="proj" data-role="dev"><h3>AppTracker <span class="roles"><span>Desktop app</span></span></h3><p>Windows app that tracks time spent in each program, with charts and daily summaries.</p><span class="stack">Python, Tkinter. <a href="https://github.com/user-741/AppTracker">Code</a></span></div>
+      <div class="proj" data-role="help sec"><h3>Remote desktop administration tool <span class="roles"><span>Security</span></span></h3><p>Remote access app with authenticated commands, file transfer and encrypted client-server traffic.</p><span class="stack">Python, C#</span></div>
+      <div class="proj" data-role="help"><h3>IT diagnostic utility <span class="roles"><span>Help desk</span></span></h3><p>Automates Windows health checks, registry analysis and network diagnostics to speed up Level 1 triage.</p><span class="stack">Python</span></div>
+      <div class="proj" data-role="sec help"><h3>Home network camera system <span class="roles"><span>Networking</span></span></h3><p>IP cameras on their own VLAN with firewall rules, restricted remote access and documented controls.</p><span class="stack">pfSense, VLANs</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2 class="h">Skills, with evidence</h2>
+    <p class="sub">Select a skill to see where I have actually used it.</p>
+    <div class="skillgrid" id="skillgrid"></div>
+    <div class="evidence" id="evidence" aria-live="polite">Nothing selected yet.</div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap split">
+    <h2 class="h">Experience</h2>
+    <div>
+      <div class="job" data-role="help sec">
+        <h3>IT Support Technician, freelance</h3><div class="when">2023 to now</div>
+        <ul>
+          <li>Diagnose and repair desktop and laptop hardware and software faults for home and small-business clients.</li>
+          <li>Set up Wi-Fi, routers and printers, and fix DNS and connectivity problems on-site and remotely.</li>
+          <li>Remove malware, restore affected systems, and install and configure Windows and Linux.</li>
+          <li>Explain problems in plain language and help clients with backups and basic security.</li>
+        </ul>
+      </div>
+      <div class="job" data-role="dev"><h3>Co-founder and Lead Developer, ClarityMeet</h3><div class="when">2026 to now</div><ul><li>Started ClarityMeet with three teammates and lead the development.</li><li>Designed the architecture and built the backend, the bot server and most of the frontend.</li></ul></div>
+      <div class="job" data-role="help"><h3>Warehouse Team Member, Chandler Macleod at Woolworths</h3><div class="when">August 2025 to now</div><ul><li>Work to strict safety and procedure standards in a large distribution centre, recognised for reliability.</li></ul></div>
+      <div class="job" data-role="help"><h3>Delivery Driver, DoorDash</h3><div class="when">November 2024 to now</div><ul><li>98% positive customer rating across more than 100 deliveries.</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap split">
+    <h2 class="h">Education</h2>
+    <ul class="edu">
+      <li><strong>Bachelor of Cybersecurity, Victoria University.</strong> 2023 to December 2026. Network security, ethical hacking, digital forensics, cryptography, incident response and virtualisation.</li>
+      <li><strong>CompTIA A+ and Security+.</strong> In progress, 2026.</li>
+      <li><strong>TryHackMe.</strong> More than 100 hours across the Red Team, Blue Team and OSINT paths, top 10% globally.</li>
+      <li><strong>Hack The Box.</strong> Starting Point and Proving Grounds labs.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap split">
+    <h2 class="h">Contact</h2>
+    <div>
+      <div class="contact">
+        <div><span>Email</span><a class="mail" href="https://www.linkedin.com/in/latifnaderi/">Message me on LinkedIn</a></div>
+        <div><span>LinkedIn</span><a href="https://www.linkedin.com/in/latifnaderi/" rel="me">linkedin.com/in/latifnaderi</a></div>
+        <div><span>Resume</span><strong>Sent on request</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Latif Naderi, Melbourne. I built this site by hand, and the <a href="https://github.com/user-741/latifnaderi">source is on GitHub</a>.</div></footer>
+
+<dialog id="brief" aria-labelledby="briefTitle">
+  <div class="dlg">
+    <button class="x" data-close aria-label="Close">&times;</button>
+    <h2 id="briefTitle">Latif Naderi</h2>
+    <p style="margin:0">IT support technician and final-year cybersecurity student</p>
+    <dl class="brief">
+      <dt>Roles</dt><dd>IT Support, Help Desk, Junior SOC or Security Analyst</dd>
+      <dt>Location</dt><dd>Melbourne, VIC. Onsite, hybrid or remote</dd>
+      <dt>Available</dt><dd>Part-time now, full-time from 2027</dd>
+      <dt>Work rights</dt><dd>Australian citizen, full licence and own car</dd>
+      <dt>Degree</dt><dd>Bachelor of Cybersecurity, Victoria University, finishing Dec 2026</dd>
+    </dl>
+    <ul>
+      <li>Three years of freelance IT support: hardware, Wi-Fi, printers, malware removal, Windows and Linux installs.</li>
+      <li>Co-founder and lead developer of ClarityMeet, a live meeting platform built by a team of four. Designed the architecture and built the backend and bot server.</li>
+      <li>Built a real-time file scanner that feeds Splunk with MITRE ATT&amp;CK tags.</li>
+      <li>Tools: Windows Server, Active Directory, pfSense, Splunk, Wazuh, Wireshark, Python, TypeScript.</li>
+    </ul>
+    <p class="noprint" style="display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 0">
+      <a class="btn solid mail" href="https://www.linkedin.com/in/latifnaderi/">Email me</a>
+      <button class="btn" id="printBrief">Save as PDF</button>
+    </p>
+  </div>
+</dialog>
+
+<dialog id="pal" class="palette" aria-label="Quick search">
+  <input id="palIn" type="text" placeholder="Jump to a section or run a network scenario" autocomplete="off" aria-controls="palList">
+  <ul id="palList" role="listbox"></ul>
+</dialog>
+
+<script>
+(function () {
+  "use strict";
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var esc = function (t) { return String(t).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+
+  /* email, assembled here so harvesting bots don't find it in the HTML */
+  var email = ["latifnaderi145", "gmail.com"].join("@");
+  document.querySelectorAll("a.mail").forEach(function (a) {
+    a.href = "mailto:" + email;
+    if (!a.classList.contains("btn")) a.textContent = email;
+  });
+
+  /* ------------------------------------------------------------ network map */
+  var NODES = {
+    net: [270, 46, "Internet", "Websites, Zoom, Teams"],
+    bot: [90, 136, "ClarityMeet bot", "Node, Puppeteer"],
+    fw:  [270, 136, "pfSense firewall", "Rules per VLAN"],
+    dns: [450, 136, "Pi DNS blocker", "dnsmasq on a Pi"],
+    app: [90, 226, "ClarityMeet app", "Gemini, Supabase"],
+    lan: [270, 226, "Switch", "VLANs 10 and 30"],
+    pc:  [450, 226, "Laptop", "File scanner running"],
+    cam: [270, 316, "IP cameras", "VLAN 30, no internet"],
+    spl: [450, 316, "Splunk", "Alerts and search"]
+  };
+  var LINKS = [["net","bot"],["net","fw"],["fw","dns"],["bot","app"],["fw","lan"],["lan","pc"],["lan","cam"],["pc","spl"]];
+  var ABOUT = {
+    net: "The outside world. Everything coming in passes the firewall first.",
+    bot: "ClarityMeet's bot server. It opens a headless browser per meeting, so several calls can be recorded at once.",
+    fw: "pfSense with separate rules for each VLAN. Cameras are blocked from the internet, PCs are allowed out.",
+    dns: "My Raspberry Pi ad blocker. Every device asks it for DNS, and known ad and tracker domains get 0.0.0.0.",
+    app: "Gemini turns the recording into a summary and tasks. Supabase stores it and the Next.js app shows it to the team.",
+    lan: "A managed switch with VLANs, so a hacked camera can't talk to the PCs.",
+    pc: "My file scanner watches Downloads, hashes and scores every new file and quarantines anything flagged.",
+    cam: "IP cameras on their own VLAN with restricted remote access, from my home camera project.",
+    spl: "Splunk receives every scan result over HEC, tagged with MITRE ATT&CK, so alerts can fire like in a SOC."
+  };
+  var SCEN = [
+    { id: "browse", name: "Open a website", hops: [
+      ["pc","lan","Laptop asks: where is abc.net.au?"], ["lan","fw","Switch passes it up from VLAN 10"], ["fw","dns","pfSense sends the DNS query to the Pi"],
+      ["dns","fw","dnsmasq: abc.net.au is clean, here's the address", "ok"], ["fw","net","Firewall allows HTTPS out on port 443", "ok"] ],
+      end: ["Page loads. Normal traffic goes straight through.", "ok"] },
+    { id: "ads", name: "Block an ad tracker", hops: [
+      ["pc","lan","A page tries to load ads.doubleclick.net"], ["lan","fw","Switch passes it up"], ["fw","dns","DNS query goes to the Pi"],
+      ["dns","dns","dnsmasq: domain is on the blocklist, answered 0.0.0.0", "bad"] ],
+      end: ["The ad never loads, for every device on the network.", "ok"], bad: "dns" },
+    { id: "malware", name: "Catch a bad download", hops: [
+      ["net","fw","invoice_malware_test.exe comes in from a phishing link"], ["fw","lan","HTTPS is allowed, so it reaches the network"], ["lan","pc","File lands in Downloads"],
+      ["pc","pc","Scanner: SHA-256 hashed, entropy 7.96, risk 95. Quarantined", "bad"], ["pc","spl","Event sent to Splunk HEC with T1204.002", "bad"] ],
+      end: ["Splunk alert fires: malicious file quarantined on the laptop.", "ok"], bad: "pc" },
+    { id: "camera", name: "Camera calls home", hops: [
+      ["cam","lan","Camera tries to reach an unknown server overseas"], ["lan","fw","Traffic tagged VLAN 30 reaches the firewall"],
+      ["fw","fw","pfSense rule: VLAN 30 to WAN is blocked. Dropped", "bad"] ],
+      end: ["The camera stays local. Only the recorder on the LAN can see it.", "ok"], bad: "fw" },
+    { id: "meeting", name: "Record a meeting", hops: [
+      ["net","bot","A Teams meeting starts on the user's calendar"], ["bot","net","Bot joins the call as a participant and records the audio"],
+      ["net","bot","Meeting ends, bot leaves by itself"], ["bot","app","Recording goes to Gemini for transcript, summary and tasks", "ok"] ],
+      end: ["Summary and action items with owners show up in ClarityMeet.", "ok"] }
+  ];
+  var svg = $("#net"), NS = "http://www.w3.org/2000/svg", W = 132, H = 44;
+  function el(n, a) { var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); return e; }
+  var linkEls = {};
+  LINKS.forEach(function (l) {
+    var A = NODES[l[0]], B = NODES[l[1]];
+    var ln = el("line", { x1: A[0], y1: A[1], x2: B[0], y2: B[1], "class": "link" });
+    svg.appendChild(ln); linkEls[l[0] + l[1]] = linkEls[l[1] + l[0]] = ln;
+  });
+  var nodeEls = {};
+  Object.keys(NODES).forEach(function (k) {
+    var n = NODES[k], g = el("g", { "class": "nd", tabindex: "0", role: "button", "aria-label": n[2] + ". " + n[3] });
+    g.appendChild(el("rect", { x: n[0] - W / 2, y: n[1] - H / 2, width: W, height: H, rx: 9 }));
+    var t1 = el("text", { x: n[0], y: n[1] - 3, "text-anchor": "middle" }); t1.textContent = n[2]; g.appendChild(t1);
+    var t2 = el("text", { x: n[0], y: n[1] + 13, "text-anchor": "middle", "class": "s" }); t2.textContent = n[3]; g.appendChild(t2);
+    var show = function () { stop(); clearMap(); g.classList.add("on"); logBox.innerHTML = '<span class="info"><b>' + esc(n[2]) + ".</b> " + esc(ABOUT[k]) + "</span>"; };
+    g.addEventListener("click", show);
+    g.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); show(); } });
+    svg.appendChild(g); nodeEls[k] = g;
+  });
+  var pkt = el("circle", { r: 7, "class": "pkt", cx: -20, cy: -20 }); svg.appendChild(pkt);
+  var logBox = $("#log"), runs = $("#runs"), token = 0;
+  var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function clearMap() {
+    Object.keys(nodeEls).forEach(function (k) { nodeEls[k].classList.remove("on", "ok", "bad"); });
+    Object.keys(linkEls).forEach(function (k) { linkEls[k].classList.remove("hot", "bad"); });
+    pkt.setAttribute("cx", -20); pkt.setAttribute("cy", -20);
+  }
+  function stop() { token++; runs.querySelectorAll(".run").forEach(function (b) { b.setAttribute("aria-pressed", "false"); }); }
+  function stamp() { var d = new Date(); return d.toTimeString().slice(0, 8); }
+  function line(text, cls) {
+    if (logBox.querySelector(".info")) logBox.innerHTML = "";
+    logBox.insertAdjacentHTML("beforeend", '<span class="ts">' + stamp() + "</span> " + (cls ? '<span class="' + cls + '">' : "") + esc(text) + (cls ? "</span>" : "") + "\n");
+    logBox.scrollTop = logBox.scrollHeight;
+  }
+  function move(a, b, bad, my) {
+    return new Promise(function (res) {
+      var A = NODES[a], B = NODES[b], dur = a === b ? 0 : 650;
+      pkt.setAttribute("class", "pkt" + (bad ? " bad" : ""));
+      if (a !== b) linkEls[a + b].classList.add(bad ? "bad" : "hot");
+      if (reduce || !dur) { pkt.setAttribute("cx", B[0]); pkt.setAttribute("cy", B[1]); return setTimeout(res, reduce ? 250 : 350); }
+      var t0 = performance.now();
+      (function f(t) {
+        if (my !== token) return res();
+        var k = Math.min((t - t0) / dur, 1), e = k < .5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
+        pkt.setAttribute("cx", A[0] + (B[0] - A[0]) * e); pkt.setAttribute("cy", A[1] + (B[1] - A[1]) * e);
+        k < 1 ? requestAnimationFrame(f) : res();
+      })(t0);
+    });
+  }
+  async function play(sc, btn) {
+    stop(); var my = token; clearMap(); logBox.innerHTML = "";
+    btn.setAttribute("aria-pressed", "true");
+    line("scenario: " + sc.name.toLowerCase());
+    for (var i = 0; i < sc.hops.length; i++) {
+      var h = sc.hops[i]; if (my !== token) return;
+      nodeEls[h[0]].classList.add("on");
+      await move(h[0], h[1], h[3] === "bad", my); if (my !== token) return;
+      nodeEls[h[1]].classList.add(h[3] === "bad" ? "bad" : "on");
+      line(h[2], h[3]);
+      await new Promise(function (r) { setTimeout(r, reduce ? 150 : 420); });
+    }
+    if (my !== token) return;
+    if (sc.bad) nodeEls[sc.bad].classList.add("bad");
+    line(sc.end[0], sc.end[1]);
+    pkt.setAttribute("cx", -20);
+    btn.setAttribute("aria-pressed", "false");
+  }
+  SCEN.forEach(function (sc) {
+    var b = document.createElement("button"); b.className = "run"; b.textContent = sc.name; b.setAttribute("aria-pressed", "false");
+    b.onclick = function () { play(sc, b); }; sc.btn = b; runs.appendChild(b);
+  });
+  function runScenario(id) { var sc = SCEN.find(function (x) { return x.id === id; }); document.getElementById("top").scrollIntoView(); setTimeout(function () { play(sc, sc.btn); }, 300); }
+
+  /* ------------------------------------------------------- ClarityMeet flow */
+  var FLOW = [
+    ["Calendar", "Google, Outlook, iCloud", "Meetings come in from a connected calendar, or the user pastes a Zoom or Teams link. Users can also upload an existing recording instead."],
+    ["Bot server", "Node, Express, Puppeteer", "My part: a bot server that launches a headless browser per meeting, so several meetings can be recorded at the same time without one blocking another."],
+    ["The call", "Zoom or Teams", "The bot joins as a participant, captures the audio and leaves by itself when the meeting ends."],
+    ["AI processing", "Google Gemini", "The recording is turned into a transcript, a short summary, key points and action items with owners and due dates."],
+    ["Storage", "Supabase", "Postgres holds meetings, tasks and teams. Supabase Auth handles sign-in with two-step verification, and Storage keeps the recordings."],
+    ["The app", "Next.js on Vercel", "Teams see summaries, assign tasks, search past meetings and view stats. Calendar feeds let people subscribe from their phone."]
+  ];
+  var flow = $("#flow"), fd = $("#flowDetail");
+  FLOW.forEach(function (f, i) {
+    var b = document.createElement("button");
+    b.className = "node"; b.setAttribute("aria-pressed", "false");
+    b.innerHTML = "<b>" + esc(f[0]) + "</b>" + esc(f[1]);
+    b.onclick = function () {
+      flow.querySelectorAll(".node").forEach(function (n) { n.setAttribute("aria-pressed", "false"); });
+      b.setAttribute("aria-pressed", "true");
+      fd.innerHTML = "<b>" + esc(f[0]) + ".</b> " + esc(f[2]);
+    };
+    flow.appendChild(b);
+  });
+
+  /* --------------------------------------------------------- scanner demo */
+  function bytesFrom(str) { return new TextEncoder().encode(str); }
+  function randomBytes(n) { var a = new Uint8Array(n); crypto.getRandomValues(a); return a; }
+  var SAMPLES = [
+    { name: "quarterly-report.pdf", make: function () { return bytesFrom("%PDF-1.7\nQuarterly report. Revenue up 4 percent on last quarter. ".repeat(60)); } },
+    { name: "update_helper.js", make: function () { return bytesFrom("var s=new ActiveXObject('WScript.Shell');s.Run('powershell -w hidden');"); } },
+    { name: "photos-backup.zip", make: function () { var r = randomBytes(6000); r[0] = 0x50; r[1] = 0x4b; return r; } },
+    { name: "invoice_malware_test.exe", make: function () { var r = randomBytes(4000); r[0] = 0x4d; r[1] = 0x5a; return r; } }
+  ];
+  var BLOCKED = ["js", "vbs", "wsf", "hta", "ps1", "bat", "cmd"], EXEC = ["exe", "dll", "scr", "msi", "com"];
+
+  function entropy(buf) {
+    var c = new Array(256).fill(0); for (var i = 0; i < buf.length; i++) c[buf[i]]++;
+    var e = 0; c.forEach(function (n) { if (n) { var p = n / buf.length; e -= p * Math.log2(p); } }); return e;
+  }
+  async function sha256(buf) {
+    var h = await crypto.subtle.digest("SHA-256", buf);
+    return Array.from(new Uint8Array(h)).map(function (b) { return b.toString(16).padStart(2, "0"); }).join("");
+  }
+  async function scan(name, buf) {
+    var box = $("#scanResult");
+    box.innerHTML = '<p style="padding:14px 16px;margin:0">Scanning ' + esc(name) + "...</p>";
+    var ext = (name.split(".").pop() || "").toLowerCase(), hash = await sha256(buf), ent = entropy(buf);
+    var score = 0, reasons = [], verdict = "clean", mitre = "", action = "Allowed";
+    if (buf.length < 10) { verdict = "blocked"; reasons.push("too small to be a complete file"); }
+    if (BLOCKED.indexOf(ext) > -1) { verdict = "blocked"; reasons.push("script type blocked by zero trust rule"); mitre = "T1059 Command and Scripting Interpreter"; }
+    if (EXEC.indexOf(ext) > -1) { score += 40; reasons.push("executable file type +40"); mitre = mitre || "T1204.002 User Execution: Malicious File"; }
+    if (ent > 7.2) { score += 30; reasons.push("high entropy " + ent.toFixed(2) + " (packed or encrypted) +30"); }
+    score += 10; reasons.push("arrived in Downloads +10");
+    if (/malware/i.test(name)) { verdict = "malicious"; score = Math.max(score, 95); reasons.push("matches the test signature"); }
+    if (verdict === "clean" && score >= 60) verdict = "suspicious";
+    if (verdict === "malicious") action = "Moved to Quarantine";
+    else if (verdict === "blocked") action = "Blocked";
+    else if (verdict === "suspicious") action = "Allowed and flagged for review";
+    var cls = verdict === "clean" ? "ok" : verdict === "suspicious" ? "warn" : "bad";
+    var ev = { time: new Date().toISOString().slice(0, 19) + "Z", source: "file_scanner", event: {
+      file: name, size_bytes: buf.length, sha256: hash, entropy: +ent.toFixed(3), risk_score: Math.min(score, 100), verdict: verdict, action: action,
+      mitre: mitre || null, nist: ["SI-4", "RA-5"] } };
+    box.innerHTML = '<ul class="checks">' +
+      "<li><span>File</span><span>" + esc(name) + " (" + buf.length.toLocaleString() + " bytes)</span></li>" +
+      "<li><span>SHA-256</span><code>" + hash + "</code></li>" +
+      "<li><span>Entropy</span><span>" + ent.toFixed(2) + " bits per byte (8 is random)</span></li>" +
+      "<li><span>Risk score</span><span>" + Math.min(score, 100) + " of 100. " + esc(reasons.join(", ")) + "</span></li>" +
+      (mitre ? "<li><span>MITRE ATT&amp;CK</span><span>" + esc(mitre) + "</span></li>" : "") +
+      '</ul><div class="verdict ' + cls + '">' + esc(verdict.charAt(0).toUpperCase() + verdict.slice(1)) + ". " + esc(action) + '</div>' +
+      '<div class="term"><span class=c>Event sent to Splunk HEC</span>\n' + esc(JSON.stringify(ev, null, 2)) + "</div>";
+  }
+  var files = $("#files"), own = files.firstElementChild;
+  SAMPLES.forEach(function (s) {
+    var b = document.createElement("button"); b.className = "file"; b.textContent = s.name; b.setAttribute("aria-pressed", "false");
+    b.onclick = function () { files.querySelectorAll(".file").forEach(function (x) { x.setAttribute("aria-pressed", "false"); }); b.setAttribute("aria-pressed", "true"); scan(s.name, s.make()); };
+    files.insertBefore(b, own);
+  });
+  $("#ownFile").onchange = function (e) {
+    var f = e.target.files[0]; if (!f) return;
+    files.querySelectorAll(".file").forEach(function (x) { x.setAttribute("aria-pressed", "false"); });
+    if (f.size > 50 * 1024 * 1024) { $("#scanResult").innerHTML = '<p style="padding:14px 16px;margin:0">That file is over 50 MB. Pick a smaller one for the demo.</p>'; return; }
+    f.arrayBuffer().then(function (ab) { scan(f.name, new Uint8Array(ab)); });
+  };
+
+  /* ------------------------------------------------------ skills + evidence */
+  var EV = {
+    cm: ["ClarityMeet", "#claritymeet"], fs: ["File Scanner with Splunk", "#scanner"], ad: ["Raspberry Pi DNS ad blocker", "#work-proof"],
+    fl: ["Freelance IT support", "#experience"], t1: ["Network map: open a website", "browse"], t2: ["Network map: catch a bad download", "malware"],
+    t3: ["Network map: camera calls home", "camera"], t4: ["Network map: block an ad tracker", "ads"], t5: ["Network map: record a meeting", "meeting"], cam: ["Home network camera system", "#work-proof"], rdt: ["Remote desktop tool", "#work-proof"], at: ["AppTracker", "#work-proof"],
+    uni: ["Bachelor of Cybersecurity labs", "#education"], thm: ["TryHackMe and Hack The Box", "#education"]
+  };
+  var SKILLS = [
+    ["Support", [["Windows 10 and 11", "fl"], ["Hardware repair", "fl"], ["Malware removal", "fl"], ["Printers", "fl"], ["Microsoft 365", "fl"]]],
+    ["Systems", [["Active Directory", "uni"], ["Windows Server", "uni"], ["Linux", "ad fl thm"], ["Hyper-V and VirtualBox", "uni"]]],
+    ["Networking", [["TCP/IP and DHCP", "fl t1"], ["DNS", "ad t4 t1"], ["VLANs and pfSense", "cam t3 uni"], ["VPNs", "uni"], ["Wi-Fi and routers", "fl t1"]]],
+    ["Security", [["Splunk", "fs t2"], ["Incident response", "uni t2"], ["Wazuh", "uni"], ["Wireshark and Nmap", "thm uni"], ["Burp Suite and ZAP", "thm"], ["MITRE ATT&CK", "fs"]]],
+    ["Code", [["Python", "fs at rdt"], ["TypeScript and Next.js", "cm t5"], ["Node.js", "cm t5"], ["C#", "rdt"], ["Bash", "ad"], ["SQL and Postgres", "cm fs"]]]
+  ];
+  var grid = $("#skillgrid"), evBox = $("#evidence");
+  SKILLS.forEach(function (g) {
+    var d = document.createElement("div");
+    d.innerHTML = "<h4>" + esc(g[0]) + '</h4><div class="chips"></div>';
+    g[1].forEach(function (s) {
+      var b = document.createElement("button"); b.className = "chip"; b.textContent = s[0]; b.dataset.ev = s[1]; b.setAttribute("aria-pressed", "false");
+      b.onclick = function () {
+        grid.querySelectorAll(".chip").forEach(function (c) { c.setAttribute("aria-pressed", "false"); });
+        b.setAttribute("aria-pressed", "true");
+        evBox.innerHTML = "<b>" + esc(s[0]) + "</b>, used in: " + s[1].split(" ").map(function (k) {
+          var e = EV[k]; return e[1].charAt(0) === "#" ? '<a href="' + e[1] + '">' + esc(e[0]) + "</a>" : '<a href="#top" data-ticket="' + e[1] + '">' + esc(e[0]) + "</a>";
+        }).join(", ");
+        evBox.querySelectorAll("[data-ticket]").forEach(function (a) { a.onclick = function (ev) { ev.preventDefault(); runScenario(a.dataset.ticket); }; });
+      };
+      d.querySelector(".chips").appendChild(b);
+    });
+    grid.appendChild(d);
+  });
+
+  /* ------------------------------------------------------------- role lens */
+  document.querySelectorAll(".seg button").forEach(function (b) {
+    b.onclick = function () {
+      document.querySelectorAll(".seg button").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+      document.body.dataset.lens = b.dataset.lens;
+      try { localStorage.setItem("lens", b.dataset.lens); } catch (e) {}
+    };
+  });
+  try { var saved = localStorage.getItem("lens"); if (saved) { var sb = document.querySelector('.seg button[data-lens="' + saved + '"]'); if (sb) sb.click(); } } catch (e) {}
+
+  /* --------------------------------------------------------------- dialogs */
+  var brief = $("#brief"), pal = $("#pal");
+  $("#openBrief").onclick = function () { brief.showModal(); };
+  $("#printBrief").onclick = function () { window.print(); };
+  document.querySelectorAll("[data-close]").forEach(function (b) { b.onclick = function () { b.closest("dialog").close(); }; });
+  [brief, pal].forEach(function (d) { d.addEventListener("click", function (e) { if (e.target === d) d.close(); }); });
+
+  var CMDS = [
+    ["Open the 30-second summary", function () { brief.showModal(); }],
+    ["Go to proof of work", "#work-proof"], ["Go to ClarityMeet", "#claritymeet"], ["Try the file scanner", "#scanner"],
+    ["Go to skills", "#skills"], ["Go to experience", "#experience"], ["Go to education", "#education"], ["Go to contact", "#contact"],
+    ["Copy my email address", function () { navigator.clipboard && navigator.clipboard.writeText(email); }],
+    ["Open LinkedIn", "https://www.linkedin.com/in/latifnaderi/"], ["Open GitHub", "https://github.com/user-741"]
+  ].concat(SCEN.map(function (sc) { return ["Network map: " + sc.name.toLowerCase(), function () { runScenario(sc.id); }]; }));
+  var palIn = $("#palIn"), palList = $("#palList"), sel = 0, shown = [];
+  function runCmd(c) { pal.close(); if (typeof c[1] === "function") c[1](); else if (c[1].charAt(0) === "#") document.querySelector(c[1]).scrollIntoView(); else location.href = c[1]; }
+  function drawPal() {
+    var q = palIn.value.toLowerCase().trim();
+    shown = CMDS.filter(function (c) { return !q || c[0].toLowerCase().indexOf(q) > -1; });
+    sel = Math.min(sel, Math.max(shown.length - 1, 0));
+    palList.innerHTML = shown.length ? "" : '<li class="none">Nothing matches. Try "map" or "contact".</li>';
+    shown.forEach(function (c, i) {
+      var li = document.createElement("li"), b = document.createElement("button");
+      b.setAttribute("role", "option"); b.setAttribute("aria-selected", String(i === sel)); b.textContent = c[0];
+      b.onclick = function () { runCmd(c); }; li.appendChild(b); palList.appendChild(li);
+    });
+  }
+  function openPal() { palIn.value = ""; sel = 0; drawPal(); pal.showModal(); palIn.focus(); }
+  $("#openPal").onclick = openPal;
+  palIn.oninput = function () { sel = 0; drawPal(); };
+  palIn.onkeydown = function (e) {
+    if (e.key === "ArrowDown") { sel = Math.min(sel + 1, shown.length - 1); drawPal(); e.preventDefault(); }
+    else if (e.key === "ArrowUp") { sel = Math.max(sel - 1, 0); drawPal(); e.preventDefault(); }
+    else if (e.key === "Enter" && shown[sel]) { runCmd(shown[sel]); }
+  };
+  document.addEventListener("keydown", function (e) {
+    var typing = /input|textarea/i.test(document.activeElement.tagName);
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") { e.preventDefault(); pal.open ? pal.close() : openPal(); }
+    else if (e.key === "/" && !typing && !pal.open && !brief.open) { e.preventDefault(); openPal(); }
+  });
+})();
+</script>
+</body>
+</html>
